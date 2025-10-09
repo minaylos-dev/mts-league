@@ -1,0 +1,31 @@
+@keyframes levitate {
+  0% {
+    translate: 0 0;
+  }
+
+  25% {
+    translate: 0 5%;
+  }
+
+  50% {
+    translate: 0 0;
+  }
+
+  75% {
+    translate: 0 -5%;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
+@keyframes running-line {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

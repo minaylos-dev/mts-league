@@ -1,0 +1,8 @@
+@import "mixins";
+
+// fonts path /public/fonts/
+
+@include font-face($font-family-mts-wide-name, "#{$font-path}MTSWide-Medium", $medium, normal);
+@include font-face($font-family-mts-text-name, "#{$font-path}MTSText-Regular", $regular, normal);
+@include font-face($font-family-mts-text-name, "#{$font-path}MTSText-Medium", $medium, normal);
+@include font-face($font-family-mts-compact-name, "#{$font-path}MTSCompact-Regular", $regular, normal);

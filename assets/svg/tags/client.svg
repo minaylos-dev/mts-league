@@ -1,0 +1,6 @@
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(0,36) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+    <path d="M141 314 c-27 -34 -26 -46 2 -72 30 -28 48 -28 75 1 28 30 28 48 -1 75 -31 29 -51 28 -76 -4z"/>
+    <path d="M61 163 c-14 -12 -23 -35 -27 -65 l-7 -48 153 0 153 0 -7 48 c-9 71 -28 82 -146 82 -78 0 -102 -3 -119 -17z"/>
+  </g>
+</svg>
