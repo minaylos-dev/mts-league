@@ -15,8 +15,8 @@
             class="section-main-faq__item"
             :question="item.question"
             :answer="item.answer"
-            :has-icon="false"
-            is-opened
+            :has-icon="true"
+            :is-opened="index == openedIndex"
             @toggle="setOpened(index)"
           />
         </div>
@@ -107,11 +107,11 @@ export default {
     &--like {
       z-index: $zLevel1;
       top: em(300);
-      left: em(10);
+      left: em(-10);
       width: 45%;
       max-width: em(700);
       height: em(700);
-      background-image: url($img-path + 'main/faq/like.png');
+      background-image: url($img-path + 'main/faq/faq.png');
       background-size: contain;
       background-repeat: no-repeat;
       animation: levitate linear infinite 10s;

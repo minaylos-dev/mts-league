@@ -5,7 +5,7 @@
       <SectionMainProgram id="program" />
     </div>
 
-    <SectionMainNominations v-if="false" id="nominations" />
+    <SectionMainNominations v-if="true" id="nominations" />
     <!--    <SectionMainPrizes id="prizes" />-->
 
     <SectionMainRatingStartedUser v-if="false" id="voting" />
@@ -14,7 +14,7 @@
     <SectionMainRatingPosts id="rating" />
     <!--    <SectionMainRating id="rating" />-->
 
-    <!--    <SectionMainWinners id="winners" />-->
+    <SectionMainWinners id="winners" />
     <!--    <SectionMainWinnersRating id="winners-rating" />-->
 
     <SectionMainFaq id="faq" />
@@ -37,7 +37,7 @@ const SectionMainRatingStartedUser = () =>
   import('@/components/section/main/RatingStartedUser.vue');
 const SectionMainRatingPosts = () => import('@/components/section/main/RatingPosts.vue');
 // const SectionMainRating = () => import('@/components/section/main/Rating.vue');1
-// const SectionMainWinners = () => import('@/components/section/main/Winners.vue');
+const SectionMainWinners = () => import('@/components/section/main/Winners.vue');
 // const SectionMainWinnersRating = () => import('@/components/section/main/WinnersRating.vue');
 const SectionMainFaq = () => import('@/components/section/main/Faq.vue');
 const SectionFeedback = () => import('@/components/section/main/Feedback.vue');
@@ -55,7 +55,7 @@ export default {
     SectionMainIntro,
     SectionMainRatingPosts,
     SectionFeedback,
-    // SectionMainWinners,
+    SectionMainWinners,
     // SectionMainRating,
   },
   computed: {
@@ -82,21 +82,7 @@ export default {
   //flex-grow: 1;
 
   &__wrapper {
-    background-image: url($img-path + 'main/background/1280.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @include media-breakpoint-down(xl) {
-      background-image: url($img-path + 'main/background/1280.jpg');
-    }
-
-    @include media-breakpoint-down(lg) {
-      background-image: url($img-path + 'main/background/768.jpg');
-    }
-
-    @include media-breakpoint-down(md) {
-      background-image: url($img-path + 'main/background/320.jpg');
-    }
+    background: linear-gradient(109deg, #dcd1ea 0, #b7b7cc 70%);
   }
 }
 </style>

@@ -5,13 +5,7 @@
         <div class="layout-footer__text">
           <span class="layout-footer__font layout-footer__font--name"> Лига МТС </span>
           <span class="layout-footer__number layout-footer__font layout-footer__font--text">
-            ‘24
-          </span>
-        </div>
-
-        <div class="layout-footer__text">
-          <span class="layout-footer__font layout-footer__font--text">
-            люди, меняющие привычное
+            ‘25
           </span>
         </div>
       </div>

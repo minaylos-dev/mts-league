@@ -55,6 +55,7 @@ export default {
   padding: em(40);
   border-radius: em(24);
   background: rgba($color-white, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
   backdrop-filter: blur(10px);
   color: $color-white;
 
@@ -75,17 +76,29 @@ export default {
 
   &__number {
     border-radius: 50%;
-    background-color: $color-red;
+    // background-color: $color-red;
     width: em(80);
     height: em(80);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    position: relative;
 
     @include media-breakpoint-down(md) {
       width: em(50);
       height: em(50);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-red;
+      filter: blur(15px);
+      border-radius: 50%;
     }
   }
 
@@ -119,6 +132,11 @@ export default {
         font-size: em(24);
         line-height: em(24, 24);
       }
+    }
+
+    &--number {
+      position: relative;
+      z-index: 10;
     }
 
     &--name {

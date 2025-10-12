@@ -73,15 +73,15 @@
             </span>
           </div>
 
-<!--          <div v-if="company " :key="company" class="block-expert-vote-head__info">-->
-<!--            <span class="block-expert-vote-head__font block-expert-vote-head__font&#45;&#45;name">-->
-<!--              Компания:-->
-<!--            </span>-->
+          <!--          <div v-if="company " :key="company" class="block-expert-vote-head__info">-->
+          <!--            <span class="block-expert-vote-head__font block-expert-vote-head__font&#45;&#45;name">-->
+          <!--              Компания:-->
+          <!--            </span>-->
 
-<!--            <span class="block-expert-vote-head__font block-expert-vote-head__font&#45;&#45;value">-->
-<!--              {{ company }}-->
-<!--            </span>-->
-<!--          </div>-->
+          <!--            <span class="block-expert-vote-head__font block-expert-vote-head__font&#45;&#45;value">-->
+          <!--              {{ company }}-->
+          <!--            </span>-->
+          <!--          </div>-->
         </div>
 
         <CButton

@@ -2,8 +2,7 @@
   <section class="rating-started">
     <div class="rating-started__wrapper">
       <div>
-        <div class="rating-started__decor rating-started__decor--star-1" />
-        <div class="rating-started__decor rating-started__decor--star-2" />
+        <div class="rating-started__decor rating-started__decor--star" />
       </div>
 
       <h2 class="rating-started__title">
@@ -60,7 +59,7 @@ export default {
     flex-direction: column;
     align-items: center;
     border-radius: em(32);
-    background: linear-gradient(48deg, #b8b9d5 3.8%, #dbdbe3 100%);
+    background: linear-gradient(125deg, #dcd1ea 0, #b7b7cc 70%);
 
     position: relative;
     padding: em(140) em(184);
@@ -97,48 +96,25 @@ export default {
       height: em(160);
     }
 
-    &--star-1 {
-      background: url('/images/rating/emoji.png') no-repeat center / contain;
-      width: em(345);
-      height: em(345);
-      top: em(-45);
-      right: em(-31);
+    &--star {
+      background: url('/images/rating/like.png') no-repeat center / contain;
+      width: em(648);
+      height: em(506);
+      bottom: em(-189);
+      right: em(-158);
 
       @include media-breakpoint-down(lg) {
-        width: em(220);
-        height: em(220);
-        top: em(-30);
-        right: em(-11);
+        width: em(550);
+        height: em(550);
+        bottom: em(-250);
+        right: em(-158);
       }
 
       @include media-breakpoint-down(md) {
-        width: em(240);
-        height: em(155);
-        top: em(-11);
-        right: em(-30);
-      }
-    }
-    &--star-2 {
-      background: url('/images/rating/left.png') no-repeat center / contain;
-      width: em(700);
-      height: em(700);
-      bottom: em(-5);
-      left: em(-50);
-
-      @include media-breakpoint-down(lg) {
-        top: auto;
-        width: em(450);
-        height: em(450);
-        bottom: em(-35);
-        left: em(-43);
-      }
-
-      @include media-breakpoint-down(md) {
-        top: auto;
-        width: em(440);
-        height: em(440);
-        bottom: em(-50);
-        left: em(-73);
+        width: em(500);
+        height: em(500);
+        bottom: em(-220);
+        right: em(-200);
       }
     }
   }

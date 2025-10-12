@@ -11,7 +11,7 @@
       :items="staticData.cards"
     />
 
-    <div class="section-main-program__decor"></div>
+    <!-- <div class="section-main-program__decor"></div> -->
   </section>
 </template>
 

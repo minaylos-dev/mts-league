@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <img class="section-main-prizes__image" src="/images/main/prizes/bg.jpeg" alt="Призы" />
+    <img class="section-main-prizes__image" src="/images/main/prizes/bg.jpg" alt="Призы" />
   </section>
 </template>
 

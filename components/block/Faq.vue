@@ -7,7 +7,7 @@
         </span>
       </div>
 
-      <CIcon v-if="hasIcon" class="block-faq__icon" name="cross" />
+      <CIcon v-if="hasIcon" class="block-faq__icon" name="chevron-down" />
     </div>
 
     <CToggleable :opened="isOpened">
@@ -75,14 +75,14 @@ export default {
   }
 
   &__icon {
-    width: em(40);
-    height: em(40);
-    rotate: 45deg;
+    width: em(30);
+    height: em(30);
+    rotate: 0deg;
     transition: rotate $trans-time;
 
     @include media-breakpoint-down(md) {
-      width: em(30);
-      height: em(30);
+      width: em(20);
+      height: em(20);
     }
   }
 
@@ -133,7 +133,7 @@ export default {
   &--opened {
     #{$parent} {
       &__icon {
-        rotate: 0deg;
+        rotate: 180deg;
       }
     }
   }

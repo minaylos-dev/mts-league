@@ -27,12 +27,7 @@
         </template>
 
         <template v-else>
-          <CButton
-            class="vote-end-popup__button"
-            text="на главную"
-            theme="black"
-            @click="onLater"
-          />
+          <CButton class="vote-end-popup__button" text="на главную" theme="grey" @click="onLater" />
         </template>
       </div>
     </div>

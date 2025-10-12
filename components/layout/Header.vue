@@ -42,8 +42,8 @@
           <span class="layout-header__font layout-header__font--email">{{ getEmail }}</span>
         </div>
         <CButton
-          class="layout-header__button layout-header__button--action"
-          :theme="buttonsTheme"
+          class="layout-header__button layout-header__button--action layout-header__button--feedback"
+          :theme="'black'"
           text="задать вопрос"
           @click="handleNavigation(staticData.routes.FEEDBACK)"
         >
@@ -348,6 +348,10 @@ export default {
 
     &--action {
       height: em(52);
+    }
+
+    &--feedback {
+      background-color: black;
     }
 
     &--action-icon {

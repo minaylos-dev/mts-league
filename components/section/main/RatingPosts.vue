@@ -125,7 +125,7 @@ export default {
 
   computed: {
     nominations() {
-      return nominations.items;
+      return nominations.items.concat(nominations.special);
     },
 
     departmentsAdapted() {
@@ -311,6 +311,7 @@ export default {
     display: flex;
     align-items: center;
     padding-right: em(32);
+    white-space: nowrap;
   }
 
   &__option-icon {

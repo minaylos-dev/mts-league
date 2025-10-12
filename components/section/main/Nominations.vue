@@ -9,6 +9,9 @@
           <span class="section-main-nominations__font section-main-nominations__font--title">
             Номинации
           </span>
+          <span class="section-main-nominations--font section-main-nominations__font--newline"
+            >с подачей заявки</span
+          >
         </div>
 
         <div class="section-main-nominations__title section-main-nominations__title--mobile">
@@ -37,9 +40,8 @@
       <div class="section-main-nominations__wrapper section-main-nominations__wrapper--special">
         <div class="section-main-nominations__subtitle">
           <span class="section-main-nominations__font section-main-nominations__font--subtitle">
-            Специальные <br />
-            номинации <br />
-            без&nbsp;голосования
+            Номинации без<br />
+            подачи заявки
           </span>
         </div>
 
@@ -279,9 +281,10 @@ export default {
 
   &__font {
     &--title {
-      font-size: em(80);
+      font-size: em(72);
       font-weight: 500;
       line-height: 100%;
+      text-transform: uppercase;
 
       @include media-breakpoint-down(lg) {
         font-size: em(30);
@@ -295,10 +298,19 @@ export default {
     &--subtitle {
       font-size: em(30);
       line-height: 1;
+      font-weight: 500;
 
       @include media-breakpoint-down(lg) {
         font-size: em(20);
       }
+    }
+
+    &--newline {
+      font-size: em(20);
+      font-weight: 500;
+      line-height: 100%;
+      display: block;
+      text-transform: uppercase;
     }
   }
 }

@@ -54,6 +54,7 @@ export default {
   border-radius: em(80);
   padding: em(20) em(30);
   border: em(2) solid $color-white;
+  background-color: $color-white;
 
   @include media-breakpoint-down(md) {
     padding: em(9) em(30);
@@ -62,7 +63,7 @@ export default {
   &__icon {
     width: em(30);
     height: em(30);
-    color: $color-white;
+    color: $color-red;
   }
 
   &__wrapper {
@@ -71,12 +72,12 @@ export default {
   }
 
   &__text {
-    color: $color-white;
+    color: $color-red;
     margin: 0 em(10);
   }
 
   &__counter {
-    color: rgba($color-white, 0.65);
+    color: rgba($color-red, 0.65);
   }
 
   &__font {

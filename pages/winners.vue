@@ -36,21 +36,7 @@ export default {
   flex-grow: 1;
 
   &__wrapper {
-    background-image: url($img-path + 'main/background/1280.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @include media-breakpoint-down(xl) {
-      background-image: url($img-path + 'main/background/1280.jpg');
-    }
-
-    @include media-breakpoint-down(lg) {
-      background-image: url($img-path + 'main/background/768.jpg');
-    }
-
-    @include media-breakpoint-down(md) {
-      background-image: url($img-path + 'main/background/320.jpg');
-    }
+    background: linear-gradient(125deg, #dcd1ea 0, #b7b7cc 70%);
   }
 }
 </style>

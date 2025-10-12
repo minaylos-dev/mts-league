@@ -21,29 +21,24 @@
           <span v-html="formattedText"></span>
         </span>
       </div>
+      <CButton text="Голосовать" theme="primary" class="post__button" />
     </div>
     <div class="post__media">
       <div class="post__image">
         <img class="post__pic" :src="image" alt="post picture" />
-      </div>
-      <div v-if="likes" class="post__likes">
-        <span class="post__font post__font--like">{{ Math.ceil(likes) }}</span>
-        <div class="post__likes-ico">
-          <CIcon name="heart" />
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import CIcon from '@/components/ui/CIcon.vue';
+import CButton from '@/components/ui/CButton.vue';
 
 import nominations from '@/config/nominations';
 
 export default {
   components: {
-    CIcon,
+    CButton,
   },
   props: {
     title: {

@@ -36,8 +36,8 @@ export default {
 
   &__logo {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: em(56);
+    top: em(14);
     width: em(80);
     height: em(80);
 
@@ -49,6 +49,7 @@ export default {
     @include media-breakpoint-down(md) {
       width: em(46);
       height: em(46);
+      left: em(16);
     }
   }
 }

@@ -28,7 +28,7 @@
           <CButton
             type="button"
             class="auth-code__button auth-code__button--repeat"
-            theme="outlined-black"
+            theme="primary"
             @click="() => resendCode(handleErrors, resetForm)"
           >
             <span class="auth-code__font auth-code__font--button"> выслать код повторно </span>

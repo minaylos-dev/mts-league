@@ -1,7 +1,10 @@
 <template>
   <main class="pages-sign-in">
     <TransitionGroup class="pages-sign-in__holder" name="fade-group" tag="div">
-      <div v-if="!authCodeState.show" key="sign" class="pages-sign-in__container">
+      <div v-if="showOrganization" key="organization" class="pages-sign-in__container">
+        <SetOrganization />
+      </div>
+      <div v-else-if="!authCodeState.show" key="sign" class="pages-sign-in__container">
         <h1 class="pages-sign-in__heading">
           <span class="pages-sign-in__font pages-sign-in__font--heading"> Вход </span>
         </h1>
@@ -22,7 +25,7 @@
               Напишите нам на адрес ligamts@yandex.ru, указав свой корпоративный e-mail"
             />
 
-            <CCheckbox
+            <!-- <CCheckbox
               v-model="form.agreement"
               class="pages-sign-in__checkbox"
               rules="checked"
@@ -39,7 +42,7 @@
                   Условиями пользования
                 </CTagDetect>
               </span>
-            </CCheckbox>
+            </CCheckbox> -->
           </template>
 
           <template #button="{ theme, invalid }">
@@ -63,10 +66,11 @@ import routes from '@/constants/routes.js';
 
 const FormSkeletonDefault = () => import('@/components/form/skeleton/FormSkeletonDefault.vue');
 import AuthCode from '@/components/section/sign-in/AuthCode.vue';
+import SetOrganization from '../components/section/sign-in/SetOrganization.vue';
 
 export default {
   name: 'PagesSignIn',
-  components: { FormSkeletonDefault, AuthCode },
+  components: { FormSkeletonDefault, AuthCode, SetOrganization },
   layout: 'auth',
   data() {
     return {
@@ -74,6 +78,8 @@ export default {
         show: false,
         data: null,
       },
+
+      showOrganization: true,
 
       form: {
         email: undefined,

@@ -1,7 +1,9 @@
 <template>
   <section class="section-winner-intro" @mousemove="moveObject">
-    <div class="section-winner-intro__background section-winner-intro__background--prize" />
-    <div class="section-winner-intro__background section-winner-intro__background--smile" />
+    <div class="section-winner-intro__background section-winner-intro__background--right-top" />
+    <div class="section-winner-intro__background section-winner-intro__background--right-bottom" />
+    <div class="section-winner-intro__background section-winner-intro__background--left-top" />
+    <div class="section-winner-intro__background section-winner-intro__background--left-bottom" />
 
     <div class="section-winner-intro__container">
       <div class="section-winner-intro__logo">
@@ -71,6 +73,7 @@ export default {
 .section-winner-intro {
   position: relative;
   padding: em(95) em(40) 0;
+  overflow: hidden;
 
   height: em(694);
   display: flex;
@@ -94,56 +97,94 @@ export default {
     position: absolute;
     z-index: $zLevel1;
 
-    &--prize {
-      z-index: $zLevel2;
-      width: em(900);
-      height: em(700);
-      right: em(-225);
+    &--right-top {
+      z-index: $zLevel3;
+      width: em(421);
+      height: em(275);
+      right: 0;
       top: 0;
-      background-image: url($img-path + 'winners/intro/smile.png');
+      background-image: url('/images/winners/intro/right-top.png');
       background-size: contain;
       background-repeat: no-repeat;
 
       @include media-breakpoint-down(lg) {
-        background-image: url($img-path + 'winners/intro/smile-768.png');
-        width: em(700);
-        height: em(500);
+        width: em(460);
+        height: em(290);
         right: em(-30);
-        top: 0;
+        top: em(60);
       }
 
       @include media-breakpoint-down(md) {
-        background-image: url($img-path + 'winners/intro/smile-320.png');
-        width: em(330);
-        height: em(380);
-        right: em(-5);
-        top: em(13);
+        right: em(-80);
+        top: em(20);
       }
     }
 
-    &--smile {
-      z-index: $zLevel2;
-      width: em(850);
-      height: em(650);
-      left: 0;
-      bottom: 0;
-      background-image: url($img-path + 'winners/intro/square.png');
+    &--right-bottom {
+      z-index: $zLevel3;
+      width: em(147);
+      height: em(136);
+      right: em(138);
+      bottom: em(92);
+      background-image: url('/images/winners/intro/right-bottom.png');
       background-size: contain;
       background-repeat: no-repeat;
 
       @include media-breakpoint-down(lg) {
-        background-image: url($img-path + 'winners/intro/square-768.png');
-        width: em(930);
-        height: em(730);
+        width: em(180);
+        height: em(160);
+        right: em(30);
+        bottom: em(130);
+      }
+
+      @include media-breakpoint-down(md) {
+        right: em(30);
+        bottom: em(120);
+      }
+    }
+
+    &--left-top {
+      z-index: $zLevel2;
+      width: em(385);
+      height: em(197);
+      left: em(32);
+      top: em(90);
+      background-image: url('/images/winners/intro/left-top.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-down(lg) {
+        width: em(400);
+        height: em(220);
+        left: em(-30);
+        top: em(90);
+      }
+
+      @include media-breakpoint-down(md) {
+        left: em(-10);
+        top: em(60);
+      }
+    }
+
+    &--left-bottom {
+      z-index: $zLevel2;
+      width: em(319);
+      height: em(313);
+      left: em(68);
+      bottom: em(-70);
+      background-image: url('/images/winners/intro/left-bottom.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-down(lg) {
+        width: em(360);
+        height: em(353);
         left: 0;
         bottom: 0;
       }
 
       @include media-breakpoint-down(md) {
-        background-image: url($img-path + 'winners/intro/square-320.png');
-        width: em(410);
-        height: em(430);
-        left: 0;
+        left: em(-20);
         bottom: 0;
       }
     }

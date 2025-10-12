@@ -112,19 +112,19 @@ export default {
 
     &--prize {
       z-index: $zLevel2;
-      width: em(640);
-      height: em(440);
+      width: em(667);
+      height: em(559);
       right: em(-135);
       top: em(100);
-      background-image: url($img-path + 'main/intro/prize.png');
+      background-image: url($img-path + 'main/intro/prize-new.png');
       background-size: contain;
       background-repeat: no-repeat;
       animation: levitate linear infinite 10s;
       //transition: transform 0.02s ease;
 
       @include media-breakpoint-down(lg) {
-        width: em(630);
-        height: em(430);
+        width: em(667);
+        height: em(559);
         right: em(5);
         top: em(250);
       }
