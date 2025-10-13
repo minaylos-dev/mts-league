@@ -1,5 +1,5 @@
 <template>
-  <div ref="background" class="block-vote-background">
+  <div class="block-vote-background">
     <div class="block-vote-background__wrapper">
       <CIcon
         v-for="index in 20"
@@ -14,75 +14,8 @@
 </template>
 
 <script>
-import gsap from 'gsap';
-
 export default {
   name: 'BlockVoteBackground',
-  data() {
-    return {
-      staticData: Object.seal({
-        iconsAnimationDuration: 2,
-
-        backgroundAnimationDuration: 0.3,
-        startBackground:
-          'linear-gradient(180deg, #b8b9d5 0%, #c0c0d8 100%), radial-gradient(61.22% 41.5% at 94.92% 44.45%, rgb(234, 233, 231) 0%, rgb(234, 233, 231) 100%), radial-gradient(88.91% 74.62% at 86.33% 94.09%, rgb(218, 218, 228) 0%, rgb(218, 218, 228) 100%), radial-gradient(91.35% 58.22% at 53.95% 115.88%, rgb(234, 233, 231) 0%, rgb(234, 233, 231) 100%);',
-        changedBackground:
-          'linear-gradient(180deg, #b8b9d5 0%, #c0c0d8 100%), radial-gradient(61.22% 41.5% at 94.92% 44.45%, rgb(234, 233, 231) 0%, rgb(234, 233, 231) 100%), radial-gradient(88.91% 74.62% at 86.33% 94.09%, rgb(218, 218, 228) 0%, rgb(218, 218, 228) 100%), radial-gradient(91.35% 58.22% at 53.95% 115.88%, rgb(234, 233, 231) 0%, rgb(234, 233, 231) 100%);',
-      }),
-    };
-  },
-  mounted() {
-    this.resetIcons();
-  },
-  methods: {
-    resetIcons() {
-      gsap.set('.block-vote-background__icon', {
-        top: `100%`,
-        autoAlpha: 0,
-      });
-    },
-    animateLike() {
-      this.resetIcons();
-
-      const backgroundResetDelay =
-        this.staticData.iconsAnimationDuration - this.staticData.backgroundAnimationDuration;
-
-      const timeline = gsap.timeline();
-
-      timeline
-        .fromTo(
-          this.$refs.background,
-          {
-            background: this.staticData.startBackground,
-          },
-          {
-            duration: this.staticData.backgroundAnimationDuration,
-            background: this.staticData.changedBackground,
-          }
-        )
-        .to(
-          '.block-vote-background__icon',
-          {
-            duration: this.staticData.iconsAnimationDuration,
-            stagger: 0.1,
-            top: `-100%`,
-            autoAlpha: 1,
-          },
-          '<'
-        )
-        .fromTo(
-          this.$refs.background,
-          {
-            background: this.staticData.changedBackground,
-          },
-          {
-            duration: this.staticData.backgroundAnimationDuration,
-            background: this.staticData.startBackground,
-          },
-          `<+=${backgroundResetDelay}`
-        );
-    },
-  },
 };
 </script>
 
@@ -93,10 +26,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, #b8b9d5 0%, #c0c0d8 100%),
-    radial-gradient(61.22% 41.5% at 94.92% 44.45%, rgb(234, 233, 231) 0%, rgb(234, 233, 231) 100%),
-    radial-gradient(88.91% 74.62% at 86.33% 94.09%, rgb(218, 218, 228) 0%, rgb(218, 218, 228) 100%),
-    radial-gradient(91.35% 58.22% at 53.95% 115.88%, rgb(234, 233, 231) 0%, rgb(234, 233, 231) 100%);
+  background: linear-gradient(125deg, #dcd1ea 0, #b7b7cc 70%);
   overflow: hidden;
 
   &__wrapper {
